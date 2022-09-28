@@ -1,4 +1,8 @@
 package com.prongbang.securebiometric
 
-class SecureBiometricManager {
+interface SecureBiometricManager {
+    fun isSupported(): Boolean
+    fun isAvailable(): Boolean
+    fun isUnavailable(): Boolean
+    fun authenticate(info: Biometric.PromptInfo, onResult: SecureBiometricPromptManager.Result)
 }

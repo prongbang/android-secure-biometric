@@ -1,5 +1,7 @@
 package com.prongbang.securebiometric.key
 
-class BiometricCryptographyKey : CryptographyKey{
+import javax.inject.Inject
+
+class BiometricCryptographyKey @Inject constructor() : CryptographyKey{
     override fun key(): String = "SECURE_BIOMETRIC"
 }
