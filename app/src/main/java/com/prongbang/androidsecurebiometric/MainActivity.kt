@@ -32,13 +32,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun initListener() {
 
-        val promptInfo = Biometric.PromptInfo(
-            title = "BIOMETRIC",
-            subtitle = "Please scan biometric to Login Application",
-            description = "description here",
-            negativeButton = "CANCEL"
-        )
-
         with(binding) {
 
             createBiometricToken.setOnClickListener {
@@ -57,6 +50,14 @@ class MainActivity : AppCompatActivity() {
             authenticationBiometric.setOnClickListener {
 
                 // Authenticate with Biometric
+
+                val promptInfo = Biometric.PromptInfo(
+                    title = "BIOMETRIC",
+                    subtitle = "Please scan biometric to Login Application",
+                    description = "description here",
+                    negativeButton = "CANCEL"
+                )
+
                 secureBiometricManager.authenticate(
                     promptInfo,
                     object : SecureBiometricPromptManager.Result {
