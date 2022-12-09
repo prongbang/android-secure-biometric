@@ -33,7 +33,7 @@ dependencyResolutionManagement {
 - `app/build.gradle`
 
 ```groovy
-implementation 'com.github.prongbang:android-secure-biometric:0.0.4'
+implementation 'com.github.prongbang:android-secure-biometric:0.0.6'
 ```
 
 ## How to use
